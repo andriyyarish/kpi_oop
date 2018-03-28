@@ -1,4 +1,4 @@
-package learn.observer;
+package learn.observer.subscribe;
 
 public abstract class Subscriber<T> {
     protected final String name;
@@ -7,6 +7,6 @@ public abstract class Subscriber<T> {
         this.name = name;
     }
 
-    abstract void update(T val);
+    public abstract void update(T val);
 
 }

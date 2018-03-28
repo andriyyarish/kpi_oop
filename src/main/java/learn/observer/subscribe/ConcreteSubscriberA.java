@@ -1,4 +1,4 @@
-package learn.observer;
+package learn.observer.subscribe;
 
 public class ConcreteSubscriberA extends Subscriber<String> {
 
@@ -7,7 +7,7 @@ public class ConcreteSubscriberA extends Subscriber<String> {
     }
 
     @Override
-    void update(String val) {
+    public void update(String val) {
         System.out.println(String.format("Subscriber %s type(A): recieved msg -> %s", name, val));
     }
 }

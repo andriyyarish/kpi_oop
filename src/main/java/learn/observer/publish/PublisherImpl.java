@@ -1,4 +1,7 @@
-package learn.observer;
+package learn.observer.publish;
+
+import learn.observer.Source;
+import learn.observer.subscribe.Subscriber;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -12,7 +15,7 @@ public class PublisherImpl implements Publisher {
     }
 
     @Override
-    public void subscriBe(Subscriber s){
+    public void subscribe(Subscriber s){
         subscribers.add(s);
     }
 
@@ -22,7 +25,7 @@ public class PublisherImpl implements Publisher {
     }
 
     @Override
-    public void provideUpdate(){
+    public void notifySubscribers(){
         getMsgFromSource().
                 forEach(msg -> subscribers.forEach(sb -> sb.update(msg)));
 
